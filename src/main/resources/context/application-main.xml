@@ -58,6 +58,6 @@
     <!-- 完成请求和注解POJO的映射 -->
     <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
 
-    <!--<import resource="classpath:context/applicationContext-*.xml" />-->
+    <import resource="classpath:context/applicationContext-*.xml" />
 
 </beans>

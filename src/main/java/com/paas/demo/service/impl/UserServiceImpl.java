@@ -17,7 +17,7 @@ public class UserServiceImpl implements IUserService {
     @Override
     public List<User> selectUsersByName(String name) {
         UserExample example = new UserExample();
-        example.createCriteria().andNameLike(name);
+        example.createCriteria().andNameLike("%" + name + "%");
         return userMapper.selectByExample(example);
     }
 
