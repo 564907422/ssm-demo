@@ -3,7 +3,7 @@
 
     <properties>
         <!-- cicd,线上环境  /data/logs/ -->
-        <property name="LOG_HOME">/home/darren/data/logs/</property>
+        <property name="LOG_HOME">D:\data\logs</property>
         <property name="projectName">ssm-demo</property>
     </properties>
 

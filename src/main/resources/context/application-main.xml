@@ -2,7 +2,8 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:c="http://www.springframework.org/schema/c" xmlns:aop="http://www.springframework.org/schema/aop"
-       xmlns:util="http://www.springframework.org/schema/util" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="
     http://www.springframework.org/schema/beans
@@ -18,25 +19,18 @@
     ">
 
     <!-- 默认的注解映射的支持 -->
-    <mvc:annotation-driven />
-
-    <!--<mvc:interceptors>-->
-        <!--<mvc:interceptor>-->
-            <!--<mvc:mapping path="/**"/>-->
-            <!--&lt;!&ndash;<bean class="com.paas.framework.cors.CorsInterceptor"></bean>&ndash;&gt;-->
-        <!--</mvc:interceptor>-->
-    <!--</mvc:interceptors>-->
+    <mvc:annotation-driven/>
 
     <!--&lt;!&ndash; 日志切入点 &ndash;&gt;-->
     <!--<bean id="logService" class="com.paas.framework.log.impl.LogServiceImpl"></bean>-->
     <!--<aop:config>-->
-        <!--&lt;!&ndash; 切入点 &ndash;&gt;-->
-        <!--<aop:pointcut expression="execution(* com.paas.template..*.*(..))" id="logPointcut" />-->
-        <!--&lt;!&ndash; 切面 &ndash;&gt;-->
-        <!--<aop:aspect id="logAspect" ref="logService">-->
-            <!--<aop:before method="log" pointcut-ref="logPointcut" />-->
-            <!--<aop:after-returning method="logArgAndReturn" returning="returnObj" pointcut-ref="logPointcut" />-->
-        <!--</aop:aspect>-->
+    <!--&lt;!&ndash; 切入点 &ndash;&gt;-->
+    <!--<aop:pointcut expression="execution(* com.paas.template..*.*(..))" id="logPointcut" />-->
+    <!--&lt;!&ndash; 切面 &ndash;&gt;-->
+    <!--<aop:aspect id="logAspect" ref="logService">-->
+    <!--<aop:before method="log" pointcut-ref="logPointcut" />-->
+    <!--<aop:after-returning method="logArgAndReturn" returning="returnObj" pointcut-ref="logPointcut" />-->
+    <!--</aop:aspect>-->
     <!--</aop:config>-->
 
     <mvc:annotation-driven>
@@ -53,11 +47,11 @@
 
     <!-- 设置使用注解的类所在的jar包 ,当使用 <context:component-scan/> 后，就可以将 <context:annotation-config/>
         移除了 -->
-    <context:component-scan base-package="com.paas" />
+    <context:component-scan base-package="com.paas"/>
 
     <!-- 完成请求和注解POJO的映射 -->
-    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter"/>
 
-    <import resource="classpath:context/applicationContext-*.xml" />
+    <import resource="classpath:context/applicationContext-*.xml"/>
 
 </beans>

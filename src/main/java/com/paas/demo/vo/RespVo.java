@@ -18,7 +18,7 @@ public class RespVo implements Serializable {
     }
 
     public static RespVo success(Object data) {
-        return new RespVo("0000", "", data);
+        return new RespVo("10000", "", data);
     }
 
     public static RespVo error(String code, String msg) {

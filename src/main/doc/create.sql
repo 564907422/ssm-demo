@@ -8,5 +8,5 @@ CREATE TABLE `user` (
   `update_time` varchar(100) DEFAULT NULL,
   `mobile` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8
